@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BestBuySearch.UserPanel">
+  <tabs>
+    <Tab text="Online Search">
+      <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                  <Label layoutX="33.0" layoutY="30.0" text="Type Query" />
+                  <TextField fx:id="searchonlineitem" layoutX="118.0" layoutY="25.0" prefHeight="27.0" prefWidth="365.0" />
+                  <Button fx:id="getonlineresults" layoutX="502.0" layoutY="25.0" mnemonicParsing="false" onAction="#getOnlineResult" text="Submit" />
+                  <ScrollPane fx:id="resultonlinepage" layoutX="33.0" layoutY="68.0" prefHeight="278.0" prefWidth="531.0">
+                      <content>
+                          <VBox fx:id="showonliner" prefHeight="522.0" prefWidth="528.0" />
+                      </content></ScrollPane>
+              </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Offline Search">
+      <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                  <Label layoutX="33.0" layoutY="30.0" text="Type Query" />
+                  <TextField fx:id="searchofflineitem" layoutX="118.0" layoutY="25.0" prefHeight="27.0" prefWidth="365.0" />
+                  <Button fx:id="getofflineresults" layoutX="502.0" layoutY="25.0" mnemonicParsing="false" onAction="#getOfflineResult" text="Submit" />
+                  <ScrollPane fx:id="resultofflinepage" layoutX="33.0" layoutY="68.0" prefHeight="278.0" prefWidth="531.0">
+                      <content>
+                          <VBox fx:id="showoffliner" prefHeight="522.0" prefWidth="528.0" />
+                      </content></ScrollPane>
+              </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Search Database">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="23.0" layoutY="14.0" text="Search all database" />
+                  <Label layoutX="23.0" layoutY="57.0" text="Search all databases by keyword" />
+                  <Label layoutX="23.0" layoutY="108.0" text="Search database by time" />
+                  <TextField layoutX="164.0" layoutY="9.0" />
+                  <TextField layoutX="236.0" layoutY="52.0" />
+                  <DatePicker layoutX="184.0" layoutY="103.0" />
+                  <TableView disable="true" layoutX="26.0" layoutY="140.0" prefHeight="210.0" prefWidth="548.0" />
+                  <Button layoutX="349.0" layoutY="9.0" mnemonicParsing="false" text="Search" />
+                  <Button layoutX="410.0" layoutY="52.0" mnemonicParsing="false" text="Search" />
+                  <Button layoutX="390.0" layoutY="103.0" mnemonicParsing="false" text="Search" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Manage Data">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="25.0" text="Delete all local data" />
+                  <Label layoutX="14.0" layoutY="71.0" text="Delete local data by keyword" />
+                  <Label layoutX="14.0" layoutY="120.0" text="Delete local data by Date" />
+                  <Button fx:id="delld" layoutX="153.0" layoutY="20.0" mnemonicParsing="false" text="Delete" />
+                  <TextField fx:id="delkey" layoutX="211.0" layoutY="66.0" />
+                  <Button fx:id="delldkey" layoutX="396.0" layoutY="66.0" mnemonicParsing="false" text="Delete" />
+                  <DatePicker fx:id="deltime" layoutX="211.0" layoutY="115.0" />
+                  <Button fx:id="dellbtime" layoutX="425.0" layoutY="115.0" mnemonicParsing="false" text="Delete" />
+                  <Button fx:id="deltimestampdb" layoutX="425.0" layoutY="272.0" mnemonicParsing="false" text="Delete" />
+                  <DatePicker fx:id="deltimedb" layoutX="211.0" layoutY="272.0" />
+                  <Button fx:id="delkeyworddb" layoutX="431.0" layoutY="223.0" mnemonicParsing="false" text="Delete" />
+                  <TextField fx:id="delkeydb" layoutX="240.0" layoutY="223.0" />
+                  <Button fx:id="deldb" layoutX="182.0" layoutY="177.0" mnemonicParsing="false" text="Delete" />
+                  <Label layoutX="14.0" layoutY="277.0" text="Delete database data by Date" />
+                  <Label layoutX="14.0" layoutY="228.0" text="Delete database data by keyword" />
+                  <Label layoutX="14.0" layoutY="182.0" text="Delete all database data" />
+               </children></AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Manage Profile">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="logout" layoutX="182.0" layoutY="138.0" mnemonicParsing="false" onAction="#logout" text="Log out">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
